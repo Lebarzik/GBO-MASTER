@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+	background-color: #d3d8df;
+	overflow-x: hidden;
+	margin: 0 auto;
+}
+
+/* Стили для шапки */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px;
+	color: white;
+	margin: 0 auto;
+	max-width: 1750px;
+}
+
+.header__logo {
+	color: #2f86ff;
+	text-shadow: 0 4px 30px rgba(0, 106, 255, 0.199);
+	font-size: 30px;
+	font-weight: 700;
+	transition: all 0.3s;
+}
+
+.header__logo:hover {
+	color: rgb(63, 63, 63);
+	text-shadow: 0 4px 30px rgba(63, 63, 63, 0.425);
+}
+
+.header__nav-list {
+	display: flex;
+	gap: 40px;
+	font-weight: 100;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	transition: all 0.3s;
+}
+
+.header__nav-list:hover {
+}
+
+.header__nav-item {
+}
+
+.header__nav-link {
+	color: rgb(63, 63, 63);
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+
+.header__nav-link:hover {
+	color: #2f86ff;
+	text-shadow: 0 4px 30px rgba(0, 106, 255, 0.288);
+}
+
+.header__book-button {
+	background: #2f86ff;
+	color: white;
+	font-size: 25px;
+	font-weight: 600;
+	padding: 10px 20px;
+	border-radius: 12px;
+	text-decoration: none;
+	transition: all 0.3s;
+	display: inline-block;
+	animation: tilt1 1.3s ease-in-out infinite; /* Плавная бесконечная анимация */
+}
+
+/* Анимация при наведении */
+.header__book-button:hover {
+	background: white;
+	color: rgb(63, 63, 63);
+	box-shadow: 0 4px 30px rgba(0, 106, 255, 0.288);
+}
+
+/* Ключевые кадры для плавного наклона влево и вправо */
+@keyframes tilt1 {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(5deg); /* Поворот влево */
+	}
+	100% {
+		transform: rotate(0deg); /* Возвращение к центру */
+	}
+}
+
+/* Стили для первой секции */
+.intro {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 120px 0px 120px;
+}
+
+.intro__text {
+	max-width: 50%;
+	margin: auto;
+	align-items: center;
+}
+
+.intro__title {
+	color: rgb(34, 34, 34);
+	font-size: 58px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.intro__title span {
+	padding: 0px 0 8px 0;
+	position: relative;
+}
+
+.intro__title span::before {
+	content: '';
+	position: absolute;
+	left: 25%;
+	bottom: 16px;
+	width: 250px;
+	height: 14px;
+	transform: skew(-12deg) translateX(-50%);
+	background: #2f86ffb7;
+	z-index: -1;
+}
+
+.intro__description {
+	color: #646464;
+	font-size: 20px;
+	margin-bottom: 40px;
+	max-width: 600px;
+}
+
+.intro__button {
+	background: #2f86ff;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 15px 30px;
+	border-radius: 12px;
+	text-decoration: none;
+	transition: all 0.3s;
+	display: inline-block;
+	animation: tilt2 1.3s ease-in-out infinite; /* Плавная бесконечная анимация */
+}
+
+/* Анимация при наведении */
+.intro__button:hover {
+	background: white;
+	color: rgb(63, 63, 63);
+	box-shadow: 0 4px 30px rgba(0, 106, 255, 0.288);
+}
+
+/* Ключевые кадры для плавного наклона влево и вправо */
+@keyframes tilt2 {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-5deg); /* Поворот влево */
+	}
+	100% {
+		transform: rotate(0deg); /* Возвращение к центру */
+	}
+}
+
+.intro__image-img {
+	width: 100%;
+	max-height: 650px;
+	object-fit: cover;
+}
+
+/* Стили для секции достижений */
+.achievements {
+	background-color: #2f86ff;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.achievements__container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.achievements__item {
+	padding: 20px;
+	width: 20%;
+	text-align: center;
+}
+
+.achievements__number {
+	font-size: 3rem;
+	color: #d3d8df;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.achievements__description {
+	font-size: 1.2rem;
+	color: #d3d8df;
+}
+
+@media (max-width: 768px) {
+	.achievements__container {
+		flex-direction: column;
+	}
+
+	.achievements__item {
+		width: 80%;
+		margin-bottom: 20px;
+	}
+}
+
+/* Стили для секции социальных сетей */
+.social-media {
+	padding: 50px 0;
+	text-align: center;
+}
+
+.social-media__title {
+	font-size: 58px;
+	color: rgb(34, 34, 34);
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+.social-media__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.social-media__image {
+	width: 70%;
+	margin: 0 100px 0 0;
+}
+
+.social-media__img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.social-media__text {
+	width: 50%;
+	text-align: left;
+}
+
+.social-media__heading {
+	font-size: 50px;
+	font-weight: 600;
+	color: rgb(34, 34, 34);
+	margin-bottom: 15px;
+}
+
+.social-media__description {
+	font-size: 18px;
+	color: rgb(63, 63, 63);
+	margin-bottom: 30px;
+}
+
+.social-media__button {
+	background-color: #2f86ff;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 12px;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.3s;
+}
+
+.social-media__button:hover {
+	background: rgb(0, 106, 255);
+	border: rgb(0, 106, 255);
+	color: rgb(63, 63, 63);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 4px 30px rgba(0, 106, 255, 0.288);
+}
+
+@media (max-width: 768px) {
+	.social-media__content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.social-media__image,
+	.social-media__text {
+		width: 80%;
+		margin-bottom: 20px;
+	}
+}
+
+.about {
+	padding: 50px 20px;
+	text-align: center;
+}
+
+.about__title {
+	font-size: 58px;
+	color: rgb(34, 34, 34);
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.about__cards {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.about__card {
+	width: 450px;
+	background-color: #d3d8df;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: left;
+	transition: all 0.3s;
+}
+
+.about__card-title {
+	font-size: 32px;
+	margin: 15px;
+	font-weight: 600;
+	text-align: center;
+	color: #2f86ff;
+	transition: all 0.3s;
+}
+
+.about__card-text {
+	font-size: 25px;
+	margin: 0 15px 10px;
+	color: #555;
+	transition: all 0.3s;
+}
+
+.about__card-extra {
+	font-size: 22px;
+	margin: 0 15px 15px;
+	color: #777;
+	transition: all 0.3s;
+}
+
+.about__card:hover {
+	background-color: #ebebeb;
+}
+
+.installation {
+	display: flex;
+	gap: 30px;
+	padding: 50px 250px;
+}
+
+.installation__content {
+	width: 50%;
+}
+
+.installation__title {
+	font-size: 58px;
+	font-weight: 700;
+	color: rgb(34, 34, 34);
+	margin-bottom: 20px;
+}
+
+.installation__features {
+	list-style: none;
+	padding: 0;
+}
+
+.installation__feature {
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.installation__form {
+	width: 50%;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 106, 255, 0.288);
+}
+
+.installation__form-title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.installation__form-text {
+	text-align: center;
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+.installation__form-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.installation__label {
+	font-size: 14px;
+	color: #333;
+}
+
+.installation__input {
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.installation__input:focus {
+	border-color: #2f86ff;
+	outline: none;
+}
+
+.installation__button {
+	padding: 12px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	background-color: #2f86ff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.installation__button:hover {
+	background: rgb(0, 106, 255);
+	border: rgb(0, 106, 255);
+	color: rgb(63, 63, 63);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 4px 30px rgba(0, 106, 255, 0.288);
+}
